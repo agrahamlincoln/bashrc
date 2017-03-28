@@ -3,12 +3,6 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source $DIR/crazy_prompt.sh
 
-# Local, unversioned init.
-if [ -f $DIR/init-local.sh ]
-then
-  source $DIR/init-local.sh
-fi
-
 # Aliases.
 alias ..="cd .."
 alias ll="ls -alF"
@@ -47,14 +41,3 @@ stophistory () {
   PROMPT_COMMAND="bash_prompt_command"
   echo 'History recording stopped. Make sure to `kill -9 $$` at the end of the session.'
 }
-
-# Go path.
-export GOPATH=$HOME/src/go/
-export PATH=$PATH:$GOPATH/bin
-
-# Setup ssh-agent.
-if [[ $OSTYPE == 'linux-gnu' ]]; then
-  pgrep -f ssh-agent > /dev/null || ssh-agent > ~/.ssh/agent_config.sh
-  eval `cat ~/.ssh/agent_config.sh`
-fi
-
