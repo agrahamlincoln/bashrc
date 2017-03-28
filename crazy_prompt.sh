@@ -87,3 +87,17 @@ PROMPT_COMMAND=bash_prompt_command
 bash_prompt
 unset bash_prompt
 
+#=== Insert anything else here that should go in your .bashrc file ===#
+
+# PF9
+dupasswd() { 2>/dev/null ssh -tt $1 sudo grep PASS /root/admin_admin.rc | sed 's/^.*=//g'; }
+duosrc() {
+    source <(2>/dev/null ssh -tt $1 sudo egrep 'USER\|PASS\|REGION\|TENANT' /root/admin_admin.rc | tr -d "\r")
+    export OS_AUTH_URL="https://${1}/keystone/v2.0"
+}
+
+# Workon / Virtualenvwrapper
+# http://virtualenvwrapper.readthedocs.io/en/latest/install.html
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /bin/virtualenvwrapper.sh
