@@ -5,6 +5,7 @@ source $DIR/crazy_prompt.sh
 
 # Aliases.
 alias ..="cd .."
+alias cpp="rsync --info=progress2 $1 $2"
 alias ll="ls -alF"
 alias la="ls -A"
 alias l="ls -CF"
