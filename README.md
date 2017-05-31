@@ -16,3 +16,8 @@ Just my own .bashrc.
 Execute the following to add to `.profile`
 
     echo "source ~/.bashrc" >> .profile
+
+### VirtualEnvWrapper
+
+This includes the shell startup lines for python virtualenvwrapper. You can read more about virtualenvwrapper here: http://virtualenvwrapper.readthedocs.io/en/latest/install.html
+ 
