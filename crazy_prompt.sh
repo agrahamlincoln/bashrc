@@ -100,4 +100,4 @@ duosrc() {
 # http://virtualenvwrapper.readthedocs.io/en/latest/install.html
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
-source /bin/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper_lazy.sh
