@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-source $DIR/crazy_prompt.sh
+source $DIR/set_ps1.sh
 
 # Aliases.
 alias ..="cd .."
@@ -11,9 +11,6 @@ alias la="ls -A"
 alias l="ls -CF"
 # ls -l and show numeric unix permissions (i.e. 600)
 alias lsn="ls -l | awk '{k=0;for(i=0;i<=8;i++)k+=((substr(\$1,i+2,1)~/[rwx]/) *2^(8-i));if(k)printf(\"%0o \",k);print}'"
-alias brc="vim ~/src/bashrc/init.sh"
-alias brcl="vim ~/src/bashrc/init-local.sh"
-alias src="source ~/.bashrc"
 # Git.
 alias gca="git commit -a"
 alias gb="git branch"
@@ -23,7 +20,7 @@ alias gch="git checkout"
 alias gpom="git pull origin master"
 alias gp="git pull"
 alias gs="git status"
-alias gbddd="git branch --merged | grep -v '\*' | grep -v '^  master$' | xargs -n 1 git branch -d"
+alias kclr="ssh-keygen -R"
 
 # Eternal bash history.
 # ---------------------
