@@ -22,6 +22,10 @@ alias gp="git pull"
 alias gs="git status"
 alias kclr="ssh-keygen -R"
 
+# Systemd Helpers
+alias scs="systemctl status"
+alias scf="systemctl --failed"
+
 # Eternal bash history.
 # ---------------------
 # Undocumented feature which sets the size to "unlimited".
