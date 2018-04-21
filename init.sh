@@ -26,6 +26,11 @@ alias kclr="ssh-keygen -R"
 alias scs="systemctl status"
 alias scf="systemctl --failed"
 
+# Arch Linux Package Management
+alias pacman-orphans="sudo pacman -Rns $(pacman -Qtdq)"
+alias pacman-update="sudo pacman -Syu"
+alias asd="auracle sync | cut -d' ' -f1 | xargs auracle download"
+
 # Eternal bash history.
 # ---------------------
 # Undocumented feature which sets the size to "unlimited".
